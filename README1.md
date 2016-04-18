@@ -18,27 +18,35 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+    The name of the product will be called Inspire!
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+    The market for this product is for everyone and anyone who would like to be re-invigorated with inspirational quotes!
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+    This product is very simple and easy to use. It will also deliver what it intends to deliver with a simple click of a button (literally)! Everyone now and then needs that little extra push to keep them moving in the right direction and what better way than an inspirational quote.  With one simple click, you can get that drive and motivation back to help keep you focused and moving forward.  Click away my friends - YOLO!
 
 ## Problem ##
   > Describe the problem your product solves.
+    Challenges in life are unavoidable.  There will be moments in in everyone's lives where they will feel like the world is stacked against them.  The solution to overcoming these problems all starts with the individual's mindset.  What better mindset to have than one of inspiration?!
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+    This product provides the solution to the problem by keeping it very simple and direct.  With one click of a button, it will begin the process of solving the problem by redirecting its audience into the proper mindset.  Idealy, it will re-invigorate the audience to stay focused and keep pushing forward.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+    Since I am the only one in my company right now, my quote will be: "No one really ever knows what they are doing in life, so don't fret if you feel lost - just keep on doing."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+    Log onto the app, and click away.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+    Foward.
