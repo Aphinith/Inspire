@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+}
+
+.categories li {
+  list-style: none;
+  display: inline;
+  padding: 40px;
+  text-align: center;
+}
+
+.categories li a:link {
+  text-decoration: none;
+}
+
+#table {
+  display: table;
+  margin: 0 auto;
+}
+
+.quote {
+  text-align: center;
+  margin-top: 25px;
+}
