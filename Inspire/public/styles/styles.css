@@ -28,11 +28,26 @@ h1 {
 }
 
 #addButton {
-  text-align: center;
-  margin-top: 25px;
+  display: inline-block;
+  margin: 0px 30px;
 }
 
 #showFavorites {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+#deleteFavorites {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.options {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#favoriteQuotes {
   text-align: center;
   margin-top: 25px;
 }

@@ -5,7 +5,11 @@
     <title>Inspire</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- <script src="ngStorage.min.js"></script> -->
+    <script src="app.js"></script>
     <!-- <script src="app.js"></script> -->
   </head>
 <!--   <body> -->
@@ -23,17 +27,29 @@
       <div class="quote">
         {{quote}} -- {{author}}
       </div>
-       <div id="addButton">
-          <button id="button" ng-click="add()">Add to Favorites</button>
-       </div>
-       <div id="showFavorites">
+      <div class="options">
+         <div id="addButton">
+            <button id="button" ng-click="add()">Add to Favorites</button>
+         </div>
+         <div id="showFavorites">
           <button id="button" ng-click="show()">Show Favorites</button>
+         </div>
+         <div id="deleteFavorites">
+          <button id="button" ng-click="delete()">Delete Favorites</button>
+         </div>
+      </div>
+       <div id="favoriteQuotes" ng-repeat="(key, value) in data">
+        <div id="favoriteQuote" ng-show="data">
+          {{key}} -- {{value}}
+        </div>
+         <!--  <div id="favoriteAuthor" ng-show="data">
+          {{value}}
+          </div> -->
        </div>
     </div>
 
     <footer>
     <p>Quotes provided by</p><span style="z-index:50;font-size:0.9em;"><img src="https://theysaidso.com/branding/theysaidso.png" height="20" width="20" alt="theysaidso.com"/><a href="https://theysaidso.com" title="Powered by quotes from theysaidso.com" style="color: #9fcc25; margin-left: 4px; vertical-align: middle;">theysaidso.com</a></span>
-    <script src="app.js"></script>
     </footer>
   </body>
 </html>

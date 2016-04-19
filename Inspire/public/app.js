@@ -1,9 +1,9 @@
-angular.module('inspire', [])
-.controller('generateQuotesCtrl', function($scope, $http) {
+angular.module('inspire', ['ngStorage'])
+.controller('generateQuotesCtrl', function($scope, $http, $localStorage) {
   // $http.defaults.headers.common["X-TheySaidSo-Api-Secret"] = 9lfbA8Lt0DgYlKpNgV4hkweF;
   $scope.quote;
   $scope.author;
-  $scope.favorites = [];
+  $scope.favorites = {};
   var search = 'http://quotes.rest/quote.json?category=';
   var key = '&api_key=9lfbA8Lt0DgYlKpNgV4hkweF';
 
@@ -72,24 +72,30 @@ angular.module('inspire', [])
 
 //**************************************************************************************
 
-
-
+$scope.storage = $localStorage.$default({});
+// $scope.storage.messages = {};
+//***************************************************************************************
 
   $scope.add = function() {
     if ($scope.quote === undefined) {
       alert('Nothing to add.');
     } else {
       alert('Quote added to your favorites!')
-      $scope.favorites.push($scope.quote + ' -- ' + $scope.author);
-      console.log($scope.favorites)
+      $scope.storage[$scope.quote] = $scope.author;
+      // $scope.storage.data[$scope.quote] = $scope.author;
     }
   };
 
   $scope.show = function() {
+    $scope.data = $scope.storage;
+    console.log($scope.data);
 
+  };
+
+  $scope.delete = function() {
+    $localStorage.$reset();
   }
 })
-
 
 
 
