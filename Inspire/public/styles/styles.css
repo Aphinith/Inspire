@@ -1,5 +1,7 @@
 h1 {
   text-align: center;
+  font-size: 45px;
+  color: #0505F6;
 }
 
 .categories li {
@@ -7,6 +9,7 @@ h1 {
   display: inline;
   padding: 40px;
   text-align: center;
+  font-size: 30px;
 }
 
 .categories li a:link {
@@ -21,4 +24,22 @@ h1 {
 .quote {
   text-align: center;
   margin-top: 25px;
+  font-size: 20px;
+}
+
+#addButton {
+  text-align: center;
+  margin-top: 25px;
+}
+
+#showFavorites {
+  text-align: center;
+  margin-top: 25px;
+}
+
+footer {
+  bottom: 20px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
