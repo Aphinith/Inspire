@@ -3,7 +3,7 @@ var app            = express();
 var fs             = require('fs');
 var http           = require('http');
 
-var port = 8080; 
+var port = process.env.PORT || 8080; 
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/public')); 
