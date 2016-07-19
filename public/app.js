@@ -5,7 +5,7 @@ angular.module('inspire', ['ngStorage'])
   $scope.author;
   $scope.favorites = {};
   var search = 'http://quotes.rest/quote.json?category=';
-  var key = '&api_key=9lfbA8Lt0DgYlKpNgV4hkweF';
+  var key = '&api_key=cy7IIIwDoKOKCIqNr_jDCQeF';
 
   //****************************************************************************************
   //function for inspirational quotes
