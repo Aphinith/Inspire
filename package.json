@@ -1,5 +1,6 @@
     {
       "name": "Inspire",
+      "description": "A source for inspiration",
       "main": "server.js",
       "dependencies": {
         "express" : "~4.5.1",
