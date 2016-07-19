@@ -4,7 +4,7 @@ angular.module('inspire', ['ngStorage'])
   $scope.quote;
   $scope.author;
   $scope.favorites = {};
-  var search = 'https://quotes.rest/quote.json?category=';
+  var search = 'http://quotes.rest/quote.json?category=';
   var key = '&api_key=cy7IIIwDoKOKCIqNr_jDCQeF';
 
   //****************************************************************************************
