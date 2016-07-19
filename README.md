@@ -1,2 +1,2 @@
 #mvp
-This is a project I completed as a student at [Telegraph Academy](http://telegraphacademy.com). This project was worked on with a pair.
+This is one of the many projects I completed as a student at [Telegraph Academy](http://telegraphacademy.com).
