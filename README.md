@@ -44,6 +44,8 @@ Open a new tab on the terminal to run Server...
 node server.js
 ```
 
+Navigate to localhost:8080 on your web browser and enjoy :)
+
 ### Roadmap
 
 View the project roadmap [here](https://github.com/Aphinith/Inspire)
