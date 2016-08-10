@@ -2,6 +2,9 @@
       "name": "Inspire",
       "description": "A source for inspiration",
       "main": "server.js",
+      "scripts": {
+        "start": "node server.js"
+      },
       "dependencies": {
         "express" : "~4.5.1",
         "mongoose" : "~3.8.0",
