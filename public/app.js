@@ -15,7 +15,7 @@ angular.module('inspire', ['ngStorage'])
     var ranNum = Math.floor(Math.random() * 10);
     $http({
       method: 'GET',
-      url: search + options[ranNum] + key
+      url: search + options[ranNum] + key + '/'
     }).success(function (response) {
         console.log('success');
         // console.log(response);
@@ -37,7 +37,7 @@ angular.module('inspire', ['ngStorage'])
     var ranNum = Math.floor(Math.random() * 10);
     $http({
       method: 'GET',
-      url: search + options[ranNum] + key
+      url: search + options[ranNum] + key 
     }).success(function successCallback(response) {
       console.log('success');
       var quote = response.contents.quote;
@@ -57,7 +57,7 @@ angular.module('inspire', ['ngStorage'])
     var ranNum = Math.floor(Math.random() * 10);
     $http({
       method: 'GET',
-      url: search + options[ranNum] + key
+      url: search + options[ranNum] + key 
     }).success(function successCallback(response) {
       console.log('success');
       var quote = response.contents.quote;
