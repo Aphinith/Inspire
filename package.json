@@ -1,14 +1,15 @@
-    {
-      "name": "Inspire",
-      "description": "A source for inspiration",
-      "main": "server.js",
-      "scripts": {
-        "start": "node server.js"
-      },
-      "dependencies": {
-        "express" : "~4.5.1",
-        "mongoose" : "~3.8.0",
-        "body-parser" : "~1.4.2",
-        "method-override" : "~2.0.2"        
-      }
-    }
+{
+  "name": "Inspire",
+  "description": "A source for inspiration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.4.2",
+    "express": "~4.5.1",
+    "method-override": "~2.0.2",
+    "mongoose": "~3.8.0",
+    "nodemon": "^1.10.2"
+  }
+}
