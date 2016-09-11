@@ -15,7 +15,7 @@ angular.module('inspire', ['ngStorage'])
     var ranNum = Math.floor(Math.random() * 10);
     $http({
       method: 'GET',
-      url: search + options[ranNum] + key + '/.index.php'
+      url: search + options[ranNum] + key
     }).success(function (response) {
         console.log('success');
         // console.log(response);
