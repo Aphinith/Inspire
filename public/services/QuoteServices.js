@@ -23,6 +23,7 @@ angular.module('QuoteServices',[])
   };
 
   var getLaughterQuotes = function() {
+    console.log('inside laughter factory function');
 
   };
 
