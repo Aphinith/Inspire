@@ -16,9 +16,10 @@ angular.module('QuoteServices',[])
       method: 'GET',
       url: '/wisdom',
     })
-    // .then(function(res) {
-    //   return res;
-    // });
+    .then(function(res) {
+      console.log('this is res for wisdom quotes:', res);
+      return res;
+    });
   };
 
   var getLaughterQuotes = function() {

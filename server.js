@@ -19,8 +19,8 @@ var key = '&api_key=cy7IIIwDoKOKCIqNr_jDCQeF';
 
 app.get('/inspire', function(req, res) {
   // console.log('got inside server side for inspire quotes');
-    var options = ['inspire', 'positive', 'confidence', 'self-improvement', 'happiness', 'attitude', 'motivational', 'inspirational', 'success', 'successful-mind'];
-    var ranNum = Math.floor(Math.random() * 10);
+  var options = ['inspire', 'positive', 'confidence', 'self-improvement', 'happiness', 'attitude', 'motivational', 'inspirational', 'success', 'successful-mind'];
+  var ranNum = Math.floor(Math.random() * 10);
   request(search + options[ranNum] + key, function(error, response, body) {
     if (error) {
       console.log('this is error: ', error);
@@ -31,8 +31,17 @@ app.get('/inspire', function(req, res) {
 });
 
 app.get('/wisdom', function(req, res) {
-  console.log('inside server side for wisdome quotes');
-})
+  // console.log('inside server side for wisdome quotes');
+    var options = ['wise', 'hope', 'wisdom', 'tso-life', 'doingyourbest', 'conscience', 'philosophy', 'existentialism', 'beauty', 'enlightenment'];
+    var ranNum = Math.floor(Math.random() * 10);
+    request(search + options[ranNum] + key, function(error, response, body) {
+      if (error) {
+        console.log('this is error: ', error)
+      }
+      console.log('inside server and this is body:', body)
+      res.send(body);
+    })
+});
 
 
 /**************************************************************/
