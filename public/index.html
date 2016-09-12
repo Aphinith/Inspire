@@ -43,13 +43,10 @@
           <button id="button" ng-click="delete()">Delete Favorites</button>
          </div>
       </div>
-       <div id="favoriteQuotes" ng-repeat="(key, value) in data">
-        <div id="favoriteQuote" ng-show="data">
+       <div id="favoriteQuotes" ng-repeat="(key, value) in favorites">
+        <div id="favoriteQuote">
           {{key}} -- {{value}}
         </div>
-         <!--  <div id="favoriteAuthor" ng-show="data">
-          {{value}}
-          </div> -->
        </div>
     </div>
     <footer id="footer">
