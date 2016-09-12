@@ -13,7 +13,9 @@ angular.module('QuoteServices',[])
   };
 
   var getWisdomQuotes = function() {
-
+    var test = 'success';
+    console.log('inside getWisdomQuotes factory', test);
+    return test;
   };
 
   var getLaughterQuotes = function() {
