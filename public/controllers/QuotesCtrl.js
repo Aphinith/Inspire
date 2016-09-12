@@ -3,9 +3,7 @@ angular.module('QuotesCtrl',['ngStorage'])
 .controller('generateQuotesCtrl', function($scope, $http, $localStorage, RQFactory) {
   $scope.quote;
   $scope.author;
-  $scope.favorites = {};
-  var search = 'http:///quotes.rest/quote.json?category=';
-  var key = '&api_key=cy7IIIwDoKOKCIqNr_jDCQeF';
+  $scope.favorites;
 
   //****************************************************************************************
   //function for inspiratioal quotes
@@ -76,14 +74,11 @@ $scope.storage = $localStorage.$default({});
     } else {
       alert('Quote added to your favorites!')
       $scope.storage[$scope.quote] = $scope.author;
-      // $scope.storage.data[$scope.quote] = $scope.author;
     }
   };
 
   $scope.show = function() {
-    $scope.data = $scope.storage;
-    console.log($scope.data);
-
+    $scope.favorites = $scope.storage;
   };
 
   $scope.delete = function() {
