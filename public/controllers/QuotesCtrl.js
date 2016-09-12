@@ -1,6 +1,6 @@
 angular.module('QuotesCtrl',['ngStorage'])
 
-.controller('generateQuotesCtrl', function($scope, $http, $localStorage) {
+.controller('generateQuotesCtrl', function($scope, $http, $localStorage, RQFactory) {
   // $http.defaults.headers.common["X-TheySaidSo-Api-Secret"] = 9lfbA8Lt0DgYlKpNgV4hkweF;
   $scope.quote;
   $scope.author;
@@ -9,27 +9,41 @@ angular.module('QuotesCtrl',['ngStorage'])
   var key = '&api_key=cy7IIIwDoKOKCIqNr_jDCQeF';
 
   //****************************************************************************************
-  //function for inspirational quotes
-  $scope.inspire = function() {
-    // $scope.quote = "Here is an inspirational quote";
-    var options = ['inspire', 'positive', 'confidence', 'self-improvement', 'happiness', 'attitude', 'motivational', 'inspirational', 'success', 'successful-mind'];
-    var ranNum = Math.floor(Math.random() * 10);
-    $http({
-      method: 'GET',
-      url: search + options[ranNum] + key
-    }).success(function (response) {
-        console.log('success');
-        // console.log(response);
-        var quote = response.contents.quote;
-        var author = response.contents.author;
-        $scope.quote = quote;
-        $scope.author = author;
 
-      },
-      function (response) {
-      console.log('error');
+  $scope.inspire = function() {
+    console.log('inspire function inside controller called');
+    RQFactory.getInspireQuotes()
+    .then(function(response) {
+      console.log(response);
+      var quote = response.data.contents.quote;
+      var author = response.data.contents.author;
+      $scope.quote = quote;
+      $scope.author = author;
     })
-  };
+  }
+
+  //****************************************************************************************
+  //function for inspirational quotes
+  // $scope.inspire = function() {
+  //   // $scope.quote = "Here is an inspirational quote";
+  //   var options = ['inspire', 'positive', 'confidence', 'self-improvement', 'happiness', 'attitude', 'motivational', 'inspirational', 'success', 'successful-mind'];
+  //   var ranNum = Math.floor(Math.random() * 10);
+  //   $http({
+  //     method: 'GET',
+  //     url: search + options[ranNum] + key
+  //   }).success(function (response) {
+  //       console.log('success');
+  //       // console.log(response);
+  //       var quote = response.contents.quote;
+  //       var author = response.contents.author;
+  //       $scope.quote = quote;
+  //       $scope.author = author;
+
+  //     },
+  //     function (response) {
+  //     console.log('error');
+  //   })
+  // };
 
   //function for wisdom quotes
   $scope.wise = function() {
