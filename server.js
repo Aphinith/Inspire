@@ -25,7 +25,6 @@ app.get('/inspire', function(req, res) {
     if (error) {
       console.log('this is error: ', error);
     }
-    console.log('inside server and this is body:', body)
     res.send(body);
   })
 });
@@ -38,7 +37,6 @@ app.get('/wisdom', function(req, res) {
       if (error) {
         console.log('this is error: ', error)
       }
-      console.log('inside server and this is body:', body)
       res.send(body);
     })
 });
