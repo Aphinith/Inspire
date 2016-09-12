@@ -14,7 +14,7 @@ angular.module('QuotesCtrl',['ngStorage'])
     console.log('inspire function inside controller called');
     RQFactory.getInspireQuotes()
     .then(function(response) {
-      console.log(response);
+      console.log('this is response: ', response);
       var quote = response.data.contents.quote;
       var author = response.data.contents.author;
       $scope.quote = quote;
