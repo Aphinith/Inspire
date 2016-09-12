@@ -28,9 +28,12 @@ angular.module('QuotesCtrl',['ngStorage'])
   $scope.wise = function() {
     console.log('wise controller function called');
     RQFactory.getWisdomQuotes()
-    // .then(function(response) {
-    //   console.log('this is response:', response);
-    // })
+    .then(function(response) {
+      var quote = response.data.contents.quote;
+      var author = response.data.contents.author;
+      $scope.quote = quote;
+      $scope.author = author;
+    })
   }
 
 
