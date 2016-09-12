@@ -29,15 +29,26 @@ app.get('/inspire', function(req, res) {
 });
 
 app.get('/wisdom', function(req, res) {
-    var options = ['wise', 'hope', 'wisdom', 'tso-life', 'doingyourbest', 'conscience', 'philosophy', 'existentialism', 'beauty', 'enlightenment'];
-    var ranNum = Math.floor(Math.random() * 10);
-    request(search + options[ranNum] + key, function(error, response, body) {
-      if (error) {
-        console.log('this is error: ', error)
-      }
-      res.send(body);
-    })
+  var options = ['wise', 'hope', 'wisdom', 'tso-life', 'doingyourbest', 'conscience', 'philosophy', 'existentialism', 'beauty', 'enlightenment'];
+  var ranNum = Math.floor(Math.random() * 10);
+  request(search + options[ranNum] + key, function(error, response, body) {
+    if (error) {
+      console.log('this is error: ', error)
+    }
+    res.send(body);
+  })
 });
+
+app.get('/laughter', function(req, res) {
+  var options = ['laughter', 'hilarious', 'humor', 'tso-funny', 'laugh', 'funny', 'sense-of-humor', 'fun', 'joke', 'geek'];
+  var ranNum = Math.floor(Math.random() * 10);
+  request(search + options[ranNum] + key, function(error, response, body) {
+    if (error) {
+      console.log('this is error: ', error);
+    }
+    res.send(body);
+  })
+})
 
 
 /**************************************************************/

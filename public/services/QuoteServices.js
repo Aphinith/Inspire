@@ -17,14 +17,17 @@ angular.module('QuoteServices',[])
       url: '/wisdom',
     })
     .then(function(res) {
-      console.log('this is res for wisdom quotes:', res);
       return res;
     });
   };
 
   var getLaughterQuotes = function() {
-    console.log('inside laughter factory function');
-
+    return $http({
+      method: 'GET',
+      url: '/laughter',
+    }).then(function(res) {
+      console.log('this is res from laughter quotes:', res)
+    })
   };
 
 
