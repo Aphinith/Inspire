@@ -1,7 +1,7 @@
-var express        = require('express');
-var app            = express();
-var http           = require('http');
-var request        = require('request');
+var express = require('express');
+var app = express();
+var request = require('request');
+var id = require('./public/keys.js');
 
 var port = process.env.PORT || 4000; 
 
@@ -14,8 +14,9 @@ app.listen(port);
 
 
 /**************************************************************/
-var search = 'http://quotes.rest/quote.json?category=';
-var key = '&api_key=cy7IIIwDoKOKCIqNr_jDCQeF';
+
+var search = id.module.search;
+var key = id.module.key;
 
 app.get('/inspire', function(req, res) {
   var options = ['inspire', 'positive', 'confidence', 'self-improvement', 'happiness', 'attitude', 'motivational', 'inspirational', 'success', 'successful-mind'];
