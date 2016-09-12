@@ -20,13 +20,15 @@ app.listen(port);
 
 
 app.get('/inspire', function(req, res) {
-  console.log('got inside server side for inspire quotes');
+  // console.log('got inside server side for inspire quotes');
     var options = ['inspire', 'positive', 'confidence', 'self-improvement', 'happiness', 'attitude', 'motivational', 'inspirational', 'success', 'successful-mind'];
   request(search + 'inspire' + key, function(error, response, body) {
-    console.log('this is error:', error);
-    console.log('inside server and this is response:', response)
+    if (error) {
+      console.log('this is error: ', error);
+    }
+    console.log('inside server and this is body:', body)
+    res.send(body);
   })
-  res.send('ok');
 })
 
 
