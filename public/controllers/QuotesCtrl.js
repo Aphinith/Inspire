@@ -42,27 +42,6 @@ angular.module('QuotesCtrl',['ngStorage'])
     })
   }
 
-
-  //function for hilarious quotes
-  // $scope.laugh = function() {
-  //   // $scope.quote = "Laughter is the cure all for all ailments";
-  //   var options = ['laughter', 'hilarious', 'humor', 'tso-funny', 'laugh', 'funny', 'sense-of-humor', 'fun', 'joke', 'geek'];
-  //   var ranNum = Math.floor(Math.random() * 10);
-  //   $http({
-  //     method: 'GET',
-  //     url: search + options[ranNum] + key 
-  //   }).success(function successCallback(response) {
-  //     console.log('success');
-  //     var quote = response.contents.quote;
-  //     var author = response.contents.author;
-  //     $scope.quote = quote;
-  //     $scope.author = author;
-  //   },
-  //   function errorCallback(response) {
-  //     console.log('error');
-  //   });
-  // };
-
 //**************************************************************************************
 //setup ngStorage to save favorite quotes
 $scope.storage = $localStorage.$default({});
