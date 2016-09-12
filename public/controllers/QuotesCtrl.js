@@ -1,7 +1,6 @@
 angular.module('QuotesCtrl',['ngStorage'])
 
 .controller('generateQuotesCtrl', function($scope, $http, $localStorage, RQFactory) {
-  // $http.defaults.headers.common["X-TheySaidSo-Api-Secret"] = 9lfbA8Lt0DgYlKpNgV4hkweF;
   $scope.quote;
   $scope.author;
   $scope.favorites = {};
@@ -37,6 +36,12 @@ angular.module('QuotesCtrl',['ngStorage'])
   $scope.laugh = function() {
     console.log('laugh controller called');
     RQFactory.getLaughterQuotes()
+    .then(function(response) {
+      var quote = response.data.contents.quote;
+      var author = response.data.contents.author;
+      $scope.quote = quote;
+      $scope.author = author;
+    })
   }
 
 

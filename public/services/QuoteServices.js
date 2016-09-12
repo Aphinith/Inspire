@@ -26,7 +26,7 @@ angular.module('QuoteServices',[])
       method: 'GET',
       url: '/laughter',
     }).then(function(res) {
-      console.log('this is res from laughter quotes:', res)
+      return res;
     })
   };
 
