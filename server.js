@@ -28,6 +28,10 @@ app.get('/inspire', function(req, res) {
     console.log('inside server and this is body:', body)
     res.send(body);
   })
+});
+
+app.get('/wisdom', function(req, res) {
+  console.log('inside server side for wisdome quotes');
 })
 
 
