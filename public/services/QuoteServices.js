@@ -3,14 +3,13 @@ angular.module('QuoteServices',[])
 .factory('RQFactory', function($http) {
 
   var getInspireQuotes = function() {
-    console.log('got inside inspire quotes factory');
-    var results;
+    // var results;
     return $http({
       method: 'GET',
       url: '/inspire',
     }).then(function(res) {
-      results = res;
-      return results
+      // results = res;
+      return res;
     });
 
   };
