@@ -9,13 +9,16 @@ angular.module('QuoteServices',[])
     }).then(function(res) {
       return res;
     });
-
   };
 
   var getWisdomQuotes = function() {
-    var test = 'success';
-    console.log('inside getWisdomQuotes factory', test);
-    return test;
+    return $http({
+      method: 'GET',
+      url: '/wisdom',
+    })
+    // .then(function(res) {
+    //   return res;
+    // });
   };
 
   var getLaughterQuotes = function() {
