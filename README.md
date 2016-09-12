@@ -1,7 +1,9 @@
 # Inspire
 
 > Inspire is a quote random quote generator.  It will access the TheySaidSo Famous Quotes API provided from theysaidso.com. The app will allow users to select from 3 different categories of quotes:
-  -- inspirational, wise, and hilarious type quotes
+  -- inspirational, wise, and hilarious type quotes.
+
+Check it out here at [https://inspire989.herokuapp.com](https://inspire989.herokuapp.com)
 
 ## Team
 
